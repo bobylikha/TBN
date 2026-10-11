@@ -1,0 +1,19 @@
+build/
+cmake-build-*/
+*.o
+*.a
+# Compiled binaries
+baseline
+*.o
+*.out
+
+# Build directories
+build/
+cmake-build-*/
+
+# IDE files
+.idea/
+.vscode/*.so
+*.out
+.idea/
+.vscode/
