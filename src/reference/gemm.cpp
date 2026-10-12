@@ -1,9 +1,6 @@
-//эталонные вычисления
+#include "gemm.hpp"
 #include <iostream>
-#include <vector>
-#include<stdexcept>
-
-using Matrix = std::vector<std::vector<int>>;
+#include <stdexcept>
 
 Matrix ternary_binary_gemm(const Matrix& A, const Matrix& B){ //General Matrix Multiplication — общее матричное умножение.
     if (A.empty() || B.empty() || A[0].empty() || B[0].empty()){ //проверка на пустые мвтрицы
@@ -58,26 +55,3 @@ Matrix ternary_binary_gemm(const Matrix& A, const Matrix& B){ //General Matrix M
     return C;
 }
 
-int main(){
-    Matrix A = {
-        {1, 0, -1},
-        {-1, 1, 1}
-    };
-
-    Matrix B = {
-        {1, -1},
-        {-1, 1},
-        {1, 1}
-    };
-    
-    Matrix C = ternary_binary_gemm(A, B);
-
-    for (const auto& row : C) {
-        for (int value : row) {
-            std::cout << value << " ";
-        }
-        std::cout << '\n';
-    }
-
-    return 0;
-}
