@@ -1,19 +1,25 @@
+# CMake build directories
 build/
 cmake-build-*/
+
+# Compiled binaries and object files
 *.o
 *.a
-# Compiled binaries
+*.so
+*.out
+*.exe
 baseline
-*.o
-*.out
+test_reference
 
-# Build directories
-build/
-cmake-build-*/
+# Backup and temporary files
+*.save
+*.swp
+*~
 
-# IDE files
-.idea/
-.vscode/*.so
-*.out
+# IDE settings
 .idea/
 .vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
